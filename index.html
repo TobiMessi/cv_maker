@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generator CV</h1>
+        <form id="cv-form">
+            <div class="form-group">
+                <label for="full-name">Imię i nazwisko</label>
+                <input type="text" id="full-name" placeholder="Wpisz swoje imię i nazwisko">
+            </div>
+            <div class="form-group">
+                <label for="job-title">Stanowisko</label>
+                <input type="text" id="job-title" placeholder="Wpisz swoje stanowisko">
+            </div>
+            <div class="form-group">
+                <label for="photo">Dodaj zdjęcie</label>
+                <input type="file" id="photo" accept="image/*">
+                <img id="photo-preview" alt="Podgląd zdjęcia">
+            </div>
+            <div class="form-group">
+                <label for="contact-info">Dane kontaktowe</label>
+                <textarea id="contact-info" rows="3" placeholder="Wpisz swój email, telefon, itd."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="work-experience">Doświadczenie zawodowe</label>
+                <textarea id="work-experience" rows="5" placeholder="Opisz swoje doświadczenie zawodowe"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="education">Szkoły, do których uczęszczałem</label>
+                <textarea id="education" rows="5" placeholder="Opisz szkoły, do których uczęszczałeś"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Umiejętności</label>
+                <textarea id="skills" rows="3" placeholder="Wpisz swoje umiejętności"></textarea>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="generateCV()">Generuj CV</button>
+                <button type="button" onclick="printCV()">Drukuj CV</button>
+                <button type="button" onclick="downloadPDF()">Pobierz PDF</button>
+            </div>
+        </form>
+
+        <div class="cv-preview" id="cv-preview">
+            <h2>Podgląd CV</h2>
+            <div id="cv-content">
+                <!-- CV content will be dynamically updated here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
