@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Generator CV</h1>
-        <form id="cv-form">
+        <form id="cv-form" onsubmit="return false;">
             <div class="form-group">
                 <label for="full-name">Imię i nazwisko</label>
                 <input type="text" id="full-name" placeholder="Wpisz swoje imię i nazwisko">
@@ -45,7 +45,6 @@
                 <button type="button" onclick="downloadPDF()">Pobierz PDF</button>
             </div>
         </form>
-
         <div class="cv-preview" id="cv-preview">
             <h2>Podgląd CV</h2>
             <div id="cv-content">
@@ -53,6 +52,9 @@
             </div>
         </div>
     </div>
+
+    <!-- html2pdf.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
