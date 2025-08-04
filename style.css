@@ -37,6 +37,19 @@ h2 {
     color: #555;
 }
 
+/* Domyślny jasny */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Tryb ciemny */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
