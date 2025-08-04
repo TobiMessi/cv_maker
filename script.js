@@ -14,6 +14,20 @@ photoInput.addEventListener('change', function () {
     }
 });
 
+// Po załadowaniu strony wczytaj dane z localStorage
+window.addEventListener('DOMContentLoaded', () => {
+  const nameInput = document.getElementById('name'); // przykładowe pole
+  const savedName = localStorage.getItem('cv_name');
+  if (savedName) {
+    nameInput.value = savedName;
+  }
+
+  // Dodaj listener na zmiany, żeby zapisywać
+  nameInput.addEventListener('input', () => {
+    localStorage.setItem('cv_name', nameInput.value);
+  });
+});
+
 // Generowanie podglądu CV
 function generateCV() {
     const fullName = document.getElementById('full-name').value;
